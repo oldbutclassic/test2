@@ -1,1 +1,1 @@
-asdasd
+http://test2blog.kro.kr/
