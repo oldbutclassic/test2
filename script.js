@@ -31,26 +31,24 @@ if (document.getElementById('posts')) {
     });
   }
   
-  // 게시글 상세 보기 (예: post.html)
-  if (window.location.pathname.includes('post.html')) {
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id');
-    const postContent = {
-      1: { title: "First Post", content: "Detailed content about the first post." },
-      2: { title: "About JavaScript", content: "JavaScript is a versatile language." },
-      3: { title: "A Day in Life", content: "Here’s a deeper dive into my daily life." },
-    };
-  
-    const post = postContent[postId] || { title: "Post Not Found", content: "Sorry, this post does not exist." };
-    document.body.innerHTML = `
-      <header class="blog-header">
-        <h1><a href="index.html">My Simple Blog</a></h1>
-      </header>
-      <main>
-        <h2>${post.title}</h2>
-        <p>${post.content}</p>
-        <a href="index.html">Back to Home</a>
-      </main>
-    `;
-  }
+  if (document.getElementById('posts')) {
+    // posts.json 파일에서 데이터 가져오기
+    fetch('./posts.json')
+        .then(response => response.json())
+        .then(posts => {
+            const postsSection = document.getElementById('posts');
+            posts.forEach(post => {
+                const postDiv = document.createElement('div');
+                postDiv.className = 'blog-post';
+                postDiv.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p>${post.content}</p>
+                    <a href="${post.link}" class="read-more">Read More</a>
+                `;
+                postsSection.appendChild(postDiv);
+            });
+        })
+        .catch(error => console.error('Error loading posts:', error));
+}
+
   
