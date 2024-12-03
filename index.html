@@ -4,23 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>유머독</title>
-  <link rel="stylesheet" href="/style/styles.css">
+  <link rel="stylesheet" href="./style/styles.css">
 </head>
 <body>
   <header class="blog-header">
-    <h1><a href="index.html">유머독</a></h1>
+    <h1><a href="./index.html">유머독</a></h1>
     <nav>
-      <a href="index.html">홈</a>
-      <a href="new_posts.html">최신 글</a>
-      <a href="hot_posts.html">인기 글</a>
+      <a href="./index.html">홈</a>
+      <a href="./new_posts.html">최신 글</a>
+      <a href="./hot_posts.html">인기 글</a>
     </nav>
   </header>
   <main class="post-list">
-    <ul>
-      <li><a href="/posts/post1.html">Post 1</a></li>
-      <li><a href="/posts/post2.html">Post 2</a></li>
-      <li><a href="/posts/post3.html">Post 3</a></li>
-    </ul>
+    <article class="post-item" id="post1">
+      <h2><a href="./posts/post1.html">1번 게시글</a></h2>
+      <img class="index-image" src="#" alt="1번 게시글 이미지">
+    </article><br>
+    <hr>
+    <article class="post-item" id="post2">
+      <h2><a href="./posts/post2.html">2번 게시글</a></h2>
+      <img class="/images/index-image.js" alt="2번 게시글 이미지">
+    </article><br>
+    <hr>
+    <article class="post-item" id="post3">
+      <h2><a href="./posts/post3.html">3번 게시글</a></h2>
+      <img class="/images/index-image.js" alt="3번 게시글 이미지">
+    </article>
     <!-- <section class="blog-posts" id="posts"> -->
       <!-- Posts will be dynamically added -->
     <!--</section> -->
@@ -28,6 +37,7 @@
   <footer class="blog-footer">
     <p>&copy; 2024 유머독. All rights reserved.</p>
   </footer>
-  <script src="/script/script.js"></script>
+  <!-- <script src="./script/script.js"></script> -->
+  <script src="./script/index-image.js"></script>
 </body>
 </html>
