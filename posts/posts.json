@@ -1,5 +1,5 @@
 [
-  { "id": 1, "link": "post1.html" },
+  { "id": 1, "link": "post1.html", "title": "1번게시글" },
   { "id": 2, "link": "post2.html" },
   { "id": 3, "link": "post3.html" }
 ]
