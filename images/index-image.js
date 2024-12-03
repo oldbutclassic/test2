@@ -11,7 +11,7 @@ const imagePaths = {
     for (const postId in imagePaths) {
       const postElement = document.getElementById(postId); // 각 게시글의 ID를 사용
       if (postElement) {
-        const imgElement = postElement.querySelector("index-image"); // 이미지 태그 선택
+        const imgElement = postElement.querySelector(".index-image"); // 이미지 태그 선택
         if (imgElement) {
           imgElement.src = imagePaths[postId]; // src 속성 설정
         }
